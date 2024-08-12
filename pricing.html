@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Malcolm Lismore Photography </title>
+    <link rel="stylesheet" href="pricingstyle.css">
+</head>
+<body>
+    <div class="navigation">
+        <a href="Home.html">Home </a>
+        <a href="About.html">About </a>
+        <a href="Gallery.html">Gallery </a>
+        <a href="pricing.html">pricing </a>
+        <a href="Enquiry.html">Enquiry</a>
+        <a href="Login.html">LogIn </a>
+        <a href="Signup.html">Signup</a>  
+    </div>
+    <div class="container5" id="pricing-container">
+    </div>
+    <script>
+      fetch('pricing.php')
+        .then(response => response.json())
+        .then(data => {
+          const pricingContainer = document.getElementById('pricing-container');
+          data.forEach(package => {
+            const packageHTML = `
+            <div class="pricing-package">
+                  <h3>${package.Name}</h3>
+                  <p>${package.Description}</p>
+                  <p class="price">$${package.Price}</p>
+                  <a href="reservedetails.html">
+                  <button>Book Pacakage</button>
+                  </div>
+            `;
+            pricingContainer.innerHTML += packageHTML;
+          });
+        })
+        .catch(error => console.error('Error fetching pricing data:', error));
+    </script>
+</body>
+</html>

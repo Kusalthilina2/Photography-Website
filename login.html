@@ -1,0 +1,41 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="loginstyle.css">
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.html">pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Enquiry.html">Enquiry</a></li>
+        </ul>
+    </nav>
+    <title>Admin Login </title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form class="login-form" method="POST" onsubmit="return auth();">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        function auth(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "Admin" && password == "Admin123"){
+                alert("Login Successfully");
+                window.location.href = "admin.html";
+                return false; 
+            }
+            else {
+                alert("Invalid Username or Password");
+                return false;
+            }
+        }   
+    </script>
+</body>
+</html>

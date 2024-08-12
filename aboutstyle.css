@@ -1,0 +1,46 @@
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+nav li {
+  margin: 0 1rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #FFA500;
+}
+.about-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  text-align: justify;
+}
+.background-section {
+  background-size: cover;
+  background-position: center;
+  height: 300px; 
+}
+@media (max-width: 768px) {
+  .about-content, .background-section {
+      padding: 1rem;
+  }
+}

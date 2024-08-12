@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Image to Database</title>
+    <link rel="stylesheet" href="updatewildlife.css">
+</head>
+<body>
+    <h1>Add Image to Database</h1>
+    <form action="updatewildlife.php" method="POST" enctype="multipart/form-data">
+        <label for="name">Image Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="image">Image File:</label>
+        <input type="file" name="image" id="image" accept="image/*" required>
+        <br>
+        <button type="submit" name="add">Add Image</button>
+    </form>
+</body>
+</html>

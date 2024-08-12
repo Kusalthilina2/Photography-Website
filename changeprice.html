@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <link rel="stylesheet" href="changeprice.css">
+        <title>About Malcolm Lismore Photography</title>
+    </head>
+    <body>
+        <header>
+            <h1>Malcolm Lismore Photography</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pricing.html">pricing</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="Enquiry.html">Enquiry</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Package</title>
+</head>
+
+    <form action="changeprice.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br>
+        <button type="submit">Update</button>
+    </form>
+</body>   
+</html> 
